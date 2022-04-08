@@ -28,3 +28,15 @@ jobs:
     # Runs a single command using the runners shell
     - name: Send greeting
       run: echo "Hello ${{ github.event.inputs.name }}"
+      
+  compilation:
+    runs-on: ubuntu-latest
+    steps:
+    - name: android_compilation
+      run: |
+        chmod +x "android.sh"
+        "script.sh"
+    - name: abdroid_compilation
+      run: |
+        chmod +x "wordpress.sh"
+        "wordpress.sh"
